@@ -13,3 +13,4 @@ Get the data by:
 ## Exploratory analysis
 * Count the number of car accidents by years:
 `for i in {2000..2017} ; do printf $i'\t'; cat ../data/spin.csv | awk '$2 ~ /'$i'/' | wc -l; done`
+* Count number of accidents with keyword death (smrt): `for i in {2000..2017} ; do printf $i'\t'; cat ../data/spin.csv | awk '$2 ~ /'$i'/' | grep smrt | wc -l; done`
